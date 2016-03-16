@@ -26,8 +26,7 @@ class GameScene: SKScene {
     let joyStick = SKSpriteNode(texture: SKTextureAtlas(named: "Joystick").textureNamed("joyStick"))
     
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        
+
         // Configure and assign audio player
         do { try self.audio = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("GuileTheme", ofType: "mp3")!))
         } catch {
@@ -72,7 +71,7 @@ class GameScene: SKScene {
     
   
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
+
         var anyButtonTouched = false
         for touch in touches {
                 // check if touch is a button
@@ -94,7 +93,6 @@ class GameScene: SKScene {
                 self.joyDidInit = true
             }
         }
-     
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -122,8 +120,6 @@ class GameScene: SKScene {
                 Player1.endTouchBehavior()
             }
         }
-
-
     }
 
 

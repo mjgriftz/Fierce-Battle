@@ -70,7 +70,7 @@ class Fighter : SKSpriteNode {
         self.size = (self.texture?.size())!
 
     }
-
+    // defines behavior for attack, depending on attack state
     func strike(enemy: Fighter) {
         let hitbox = Hitbox(position: CGPoint(x: self.position.x - 40, y: self.position.y + 40))
         let hitArea = enemy.boundingBox
