@@ -18,6 +18,8 @@ class GameButton {
         self.image = SKSpriteNode(imageNamed: image)
         self.position = position
         self.image.position = position
+        self.image.size.width = 256.0
+        self.image.size.height = 256.0
     }
     
     func wasPressed(touchPoint: CGPoint) -> Bool {
@@ -36,7 +38,7 @@ class GameButton {
 
 class JumpButton : GameButton {
     override func execute(player: Fighter) -> Bool {
-        player.nextState = jumpState()
+        player.state.tryJump(player)
         
         return true
     }
@@ -44,7 +46,7 @@ class JumpButton : GameButton {
 
 class AttackButton : GameButton {
     override func execute(player: Fighter) -> Bool {
-        
+        player.state.tryAttack(player)
         
         return true
     }
@@ -52,7 +54,7 @@ class AttackButton : GameButton {
 
 class SpecialButton : GameButton {
     override func execute(player: Fighter) -> Bool {
-        
+        player.state.trySpecial(player)
         
         return true
     }
@@ -60,7 +62,7 @@ class SpecialButton : GameButton {
 
 class BlockButton: GameButton {
     override func execute(player: Fighter) -> Bool {
-        
+        player.state.tryBlock(player)
         
         return true
     }

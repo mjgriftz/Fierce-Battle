@@ -24,6 +24,10 @@ class BoundingBox {
     var size: CGSize
     var position: CGPoint
     
+    func updatePosition(newPosition: CGPoint) {
+        self.position = newPosition
+    }
+    
     init (position: CGPoint) {
         self.position = position
         self.size = CGSize(width: 64.0, height: 64.0)
@@ -33,4 +37,6 @@ class BoundingBox {
         self.position = position
         self.size = size
     }
+    
+    
 }

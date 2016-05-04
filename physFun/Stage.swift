@@ -11,7 +11,10 @@ import SpriteKit
 
 class Stage {
     
-    let background: SKSpriteNode 
+    let background: SKSpriteNode
+//    let background2: SKSpriteNode
+//    let background3: SKSpriteNode
+//    let foreground: SKSpriteNode
     let leftBound = 0.0
     let rightBound: CGFloat = 2048.0
     let floor: CGFloat = 352.0

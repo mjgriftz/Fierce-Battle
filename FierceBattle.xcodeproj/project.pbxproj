@@ -16,8 +16,11 @@
 		268398911C61614A00AB955E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2683988F1C61614A00AB955E /* Main.storyboard */; };
 		268398931C61614A00AB955E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268398921C61614A00AB955E /* Assets.xcassets */; };
 		268398961C61614A00AB955E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268398941C61614A00AB955E /* LaunchScreen.storyboard */; };
+		26A1D0D91CAB6DDC0068FA30 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 26A1D0D81CAB6DDC0068FA30 /* MainMenuScene.sks */; };
+		26A1D0DB1CAB6E000068FA30 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D0DA1CAB6E000068FA30 /* MainMenuScene.swift */; };
 		26B0BD801C686FC2006AB939 /* GuileTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 26B0BD7F1C686FC2006AB939 /* GuileTheme.mp3 */; };
 		26B0BD821C693CDB006AB939 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B0BD811C693CDB006AB939 /* Fighter.swift */; };
+		26E118C21CD52B5D0071A09C /* FighterProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E118C11CD52B5D0071A09C /* FighterProfile.swift */; };
 		26F67A3B1C6D4C72002A7BCA /* Hitbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A3A1C6D4C72002A7BCA /* Hitbox.swift */; };
 		26F67A3D1C6E9F10002A7BCA /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A3C1C6E9F10002A7BCA /* BoundingBox.swift */; };
 		26F67A3F1C6EFF32002A7BCA /* FighterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A3E1C6EFF32002A7BCA /* FighterState.swift */; };
@@ -38,8 +41,11 @@
 		268398921C61614A00AB955E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		268398951C61614A00AB955E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		268398971C61614A00AB955E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A1D0D81CAB6DDC0068FA30 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MainMenuScene.sks; path = ../MainMenuScene.sks; sourceTree = "<group>"; };
+		26A1D0DA1CAB6E000068FA30 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		26B0BD7F1C686FC2006AB939 /* GuileTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GuileTheme.mp3; sourceTree = "<group>"; };
 		26B0BD811C693CDB006AB939 /* Fighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
+		26E118C11CD52B5D0071A09C /* FighterProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FighterProfile.swift; sourceTree = "<group>"; };
 		26F67A3A1C6D4C72002A7BCA /* Hitbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hitbox.swift; sourceTree = "<group>"; };
 		26F67A3C1C6E9F10002A7BCA /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
 		26F67A3E1C6EFF32002A7BCA /* FighterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FighterState.swift; sourceTree = "<group>"; };
@@ -78,7 +84,10 @@
 		268398861C61614A00AB955E /* physFun */ = {
 			isa = PBXGroup;
 			children = (
+				26E118C31CD52CC30071A09C /* Player */,
+				26A1D0D81CAB6DDC0068FA30 /* MainMenuScene.sks */,
 				268398871C61614A00AB955E /* AppDelegate.swift */,
+				26A1D0DA1CAB6E000068FA30 /* MainMenuScene.swift */,
 				26F67A421C7CF3C2002A7BCA /* Stage.swift */,
 				268398891C61614A00AB955E /* GameScene.sks */,
 				2683988B1C61614A00AB955E /* GameScene.swift */,
@@ -92,12 +101,20 @@
 				26B0BD7F1C686FC2006AB939 /* GuileTheme.mp3 */,
 				26F67A401C751507002A7BCA /* NWO.mp3 */,
 				268398971C61614A00AB955E /* Info.plist */,
-				26B0BD811C693CDB006AB939 /* Fighter.swift */,
-				26F67A3E1C6EFF32002A7BCA /* FighterState.swift */,
-				26F67A3C1C6E9F10002A7BCA /* BoundingBox.swift */,
-				26F67A3A1C6D4C72002A7BCA /* Hitbox.swift */,
 			);
 			path = physFun;
+			sourceTree = "<group>";
+		};
+		26E118C31CD52CC30071A09C /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				26E118C11CD52B5D0071A09C /* FighterProfile.swift */,
+				26B0BD811C693CDB006AB939 /* Fighter.swift */,
+				26F67A3E1C6EFF32002A7BCA /* FighterState.swift */,
+				26F67A3A1C6D4C72002A7BCA /* Hitbox.swift */,
+				26F67A3C1C6E9F10002A7BCA /* BoundingBox.swift */,
+			);
+			name = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A1D0D91CAB6DDC0068FA30 /* MainMenuScene.sks in Resources */,
 				2683988A1C61614A00AB955E /* GameScene.sks in Resources */,
 				268398961C61614A00AB955E /* LaunchScreen.storyboard in Resources */,
 				26F67A411C751507002A7BCA /* NWO.mp3 in Resources */,
@@ -175,10 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A1D0DB1CAB6E000068FA30 /* MainMenuScene.swift in Sources */,
 				2683988C1C61614A00AB955E /* GameScene.swift in Sources */,
 				26B0BD821C693CDB006AB939 /* Fighter.swift in Sources */,
 				26F67A3D1C6E9F10002A7BCA /* BoundingBox.swift in Sources */,
 				26F67A431C7CF3C2002A7BCA /* Stage.swift in Sources */,
+				26E118C21CD52B5D0071A09C /* FighterProfile.swift in Sources */,
 				26F67A3B1C6D4C72002A7BCA /* Hitbox.swift in Sources */,
 				2683988E1C61614A00AB955E /* GameViewController.swift in Sources */,
 				268398881C61614A00AB955E /* AppDelegate.swift in Sources */,

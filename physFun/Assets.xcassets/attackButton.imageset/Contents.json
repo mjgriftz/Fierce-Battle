@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "attackButton.png",
+      "filename" : "ButtonAttack.png",
       "scale" : "1x"
     },
     {

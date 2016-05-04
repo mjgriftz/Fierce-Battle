@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "specialButton.png",
+      "filename" : "ButtonSpecial.png",
       "scale" : "1x"
     },
     {

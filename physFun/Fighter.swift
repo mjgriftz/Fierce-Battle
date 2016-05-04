@@ -15,38 +15,47 @@ class Fighter : SKSpriteNode {
     static let frameDuration: Int = 10
     static let inputSensitivity: CGFloat = 0.1
     static let maxVelocityX: CGFloat = 50.0
+    var opponent: Fighter?
     var jumpVelocity: CGFloat = 0.0
     var velocityX: CGFloat = 0.0
     var velocityY: CGFloat = 0.0
     var didTouch = false
     var isWalking = false
-    var currentFrame = 0
+    var currentWalkFrame = 0
+    var currentAtkFrame = 0
+    var currentSpecialFrame = 0
     var state: FighterState = standState()
     var nextState: FighterState? = nil
-    var frames = ["contact", "recoil", "pass", "high"] 
-    /* initializers */
+    var walkFrames = ["contact", "recoil", "pass", "high"]
+    var atkFrames = ["atk1", "atk2", "atk3", "atk4"]
+    
+    /* Initializers */
     
     init(withAtlas atlas: SKTextureAtlas) {
         self.spriteAtlas = atlas
         self.boundingBox = BoundingBox(position: CGPointZero, of: CGSize(width: 128.0, height: 256.0))
         super.init(texture: self.spriteAtlas!.textureNamed("stand"), color: UIColor.whiteColor(), size: (self.spriteAtlas?.textureNamed("stand").size())!)
-        
+        self.boundingBox.size = self.spriteAtlas!.textureNamed("stand").size()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /* methods */
+    /* Methods */
     
     private func checkAnimation() {
-        // runs through appropriate animation frames in sequence
+        
+        // Runs through appropriate animation frames in sequence
+        
         state.runAnimation(self)
  
     }
     
     private func runPhysics(withGravity gravity: CGFloat, floor: CGFloat, right: CGFloat) {
-        // defines custom physics behavior for Player object
+        
+        // Defines custom physics behavior for Player object
+        
         self.boundingBox.position = self.position
         self.velocityY += gravity
         self.position.y += self.velocityY
@@ -60,31 +69,26 @@ class Fighter : SKSpriteNode {
 
     
     func touchBehavior(first: CGPoint, next: CGPoint) {
-        // defines behavior for touchesMoved
+        
+        // Defines behavior for touchesMoved
+        
         self.state.touchBehavior(self, first: first, next: next)
     }
     
     func endTouchBehavior() {
-        // defines behavior for touchesEnded
+        
+        // Defines behavior for touchesEnded
+        
         self.state.endTouchBehavior(self)
         self.size = (self.texture?.size())!
 
     }
-    // defines behavior for attack, depending on attack state
-    func strike(enemy: Fighter) {
-        let hitbox = Hitbox(position: CGPoint(x: self.position.x - 40, y: self.position.y + 40))
-        let hitArea = enemy.boundingBox
-        if didHit(area: hitArea, with: hitbox) {
-            enemy.getHit()
-        }
-    }
     
-    func getHit() {
-        
-    }
-    
-    func didHit(area object: BoundingBox, with box: Hitbox) -> Bool {
-        if !(object.max.x < box.min.x || object.max.y < box.min.y || object.min.x > box.max.x || object.min.y > box.max.y) {
+    func didHit(with box: Hitbox) -> Bool {
+        if !(opponent?.boundingBox.max.x < box.min.x
+            || opponent?.boundingBox.max.y < box.min.y
+            || opponent?.boundingBox.min.x > box.max.x
+            || opponent?.boundingBox.min.y > box.max.y) {
             return true
         }
         return false
@@ -95,12 +99,16 @@ class Fighter : SKSpriteNode {
     }
     
     func update(with gravity: CGFloat, floor: CGFloat, right: CGFloat) {
+        
         // called once per frame
+        
+        self.boundingBox.updatePosition(self.position)
+        
         if nextState != nil {
             self.state = nextState!
             self.nextState = nil 
             self.state.entryBehavior(self)
-            }
+        }
         
         self.runPhysics(withGravity: gravity, floor: floor, right: right)
         self.checkAnimation()

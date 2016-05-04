@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "blockButton.png",
+      "filename" : "ButtonBlock.png",
       "scale" : "1x"
     },
     {
