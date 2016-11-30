@@ -24,7 +24,7 @@ class BoundingBox {
     var size: CGSize
     var position: CGPoint
     
-    func updatePosition(newPosition: CGPoint) {
+    func updatePosition(_ newPosition: CGPoint) {
         self.position = newPosition
     }
     

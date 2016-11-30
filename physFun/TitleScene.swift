@@ -15,9 +15,9 @@ class TitleScene: SKScene {
     var audio: AVAudioPlayer?
     
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         
-        do { try self.audio = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("NWO", ofType: "mp3")!))
+        do { try self.audio = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "NWO", ofType: "mp3")!))
         } catch {
             
         }
@@ -25,7 +25,7 @@ class TitleScene: SKScene {
         self.audio?.prepareToPlay()
         self.audio?.play()
     }
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //
         
         
@@ -34,13 +34,13 @@ class TitleScene: SKScene {
         let sceneSize = CGSize(width: 2048, height: 1536)
         theScene?.size = sceneSize
         self.audio?.stop()
-        let trans = SKTransition.doorsCloseHorizontalWithDuration(1)
-        theScene?.scaleMode = .AspectFill
+        let trans = SKTransition.doorsCloseHorizontal(withDuration: 1)
+        theScene?.scaleMode = .aspectFill
         self.view?.presentScene(theScene!, transition: trans)
         
     }
     
-    override func update(currentTime: NSTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         //
     }
 }

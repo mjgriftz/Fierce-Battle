@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "268398831C61614A00AB955E"
-               BuildableName = "physFun.app"
-               BlueprintName = "physFun"
-               ReferencedContainer = "container:physFun.xcodeproj">
+               BuildableName = "FierceBattle.app"
+               BlueprintName = "FierceBattle"
+               ReferencedContainer = "container:FierceBattle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "268398831C61614A00AB955E"
-            BuildableName = "physFun.app"
-            BlueprintName = "physFun"
-            ReferencedContainer = "container:physFun.xcodeproj">
+            BuildableName = "FierceBattle.app"
+            BlueprintName = "FierceBattle"
+            ReferencedContainer = "container:FierceBattle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "268398831C61614A00AB955E"
-            BuildableName = "physFun.app"
-            BlueprintName = "physFun"
-            ReferencedContainer = "container:physFun.xcodeproj">
+            BuildableName = "FierceBattle.app"
+            BlueprintName = "FierceBattle"
+            ReferencedContainer = "container:FierceBattle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "268398831C61614A00AB955E"
-            BuildableName = "physFun.app"
-            BlueprintName = "physFun"
-            ReferencedContainer = "container:physFun.xcodeproj">
+            BuildableName = "FierceBattle.app"
+            BlueprintName = "FierceBattle"
+            ReferencedContainer = "container:FierceBattle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

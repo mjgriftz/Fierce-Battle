@@ -7,9 +7,34 @@
 //
 
 import SpriteKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class Fighter : SKSpriteNode {
     
+    let atkpwr: Int
     let spriteAtlas: SKTextureAtlas?
     let boundingBox: BoundingBox
     static let frameDuration: Int = 10
@@ -28,13 +53,16 @@ class Fighter : SKSpriteNode {
     var nextState: FighterState? = nil
     var walkFrames = ["contact", "recoil", "pass", "high"]
     var atkFrames = ["atk1", "atk2", "atk3", "atk4"]
+    var hp: Int
     
     /* Initializers */
     
     init(withAtlas atlas: SKTextureAtlas) {
         self.spriteAtlas = atlas
-        self.boundingBox = BoundingBox(position: CGPointZero, of: CGSize(width: 128.0, height: 256.0))
-        super.init(texture: self.spriteAtlas!.textureNamed("stand"), color: UIColor.whiteColor(), size: (self.spriteAtlas?.textureNamed("stand").size())!)
+        self.boundingBox = BoundingBox(position: CGPoint.zero, of: CGSize(width: 100.0, height: 256.0))
+        self.atkpwr = 7;
+        self.hp = 100;
+        super.init(texture: self.spriteAtlas!.textureNamed("stand"), color: UIColor.white, size: (self.spriteAtlas?.textureNamed("stand").size())!)
         self.boundingBox.size = self.spriteAtlas!.textureNamed("stand").size()
     }
     
@@ -44,7 +72,7 @@ class Fighter : SKSpriteNode {
     
     /* Methods */
     
-    private func checkAnimation() {
+    fileprivate func checkAnimation() {
         
         // Runs through appropriate animation frames in sequence
         
@@ -52,7 +80,7 @@ class Fighter : SKSpriteNode {
  
     }
     
-    private func runPhysics(withGravity gravity: CGFloat, floor: CGFloat, right: CGFloat) {
+    fileprivate func runPhysics(withGravity gravity: CGFloat, floor: CGFloat, right: CGFloat) {
         
         // Defines custom physics behavior for Player object
         
@@ -68,7 +96,7 @@ class Fighter : SKSpriteNode {
     }
 
     
-    func touchBehavior(first: CGPoint, next: CGPoint) {
+    func touchBehavior(_ first: CGPoint, next: CGPoint) {
         
         // Defines behavior for touchesMoved
         

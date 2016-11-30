@@ -30,11 +30,11 @@ class GameScene: SKScene {
     var joyDidInit: Bool = false
 
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
 
         // Configure and assign audio player
         
-        do { try self.audio = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("GuileTheme", ofType: "mp3")!))
+        do { try self.audio = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "DangerZone", ofType: "mp3")!))
         } catch {
         
         }
@@ -45,7 +45,7 @@ class GameScene: SKScene {
         // Configure and draw Stage
         
         self.stage.background.size = self.size
-        self.stage.background.anchorPoint = CGPointZero
+        self.stage.background.anchorPoint = CGPoint.zero
         self.stage.background.position = CGPoint(x: 0.0, y: 200)
         self.stage.background.zPosition = 0
         self.stage.background.size.height *= 1.4
@@ -80,7 +80,7 @@ class GameScene: SKScene {
     }
     
   
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         var anyButtonTouched = false
         for touch in touches {
@@ -88,14 +88,14 @@ class GameScene: SKScene {
             // Check if touch is a button
             
             for button in self.buttonList {
-                if button.wasPressed(touch.locationInNode(self)) { button.execute(Player1); anyButtonTouched = true}
+                if button.wasPressed(touch.location(in: self)) { button.execute(Player1); anyButtonTouched = true}
             }
             
             // If touch isn't a button, run joystick logic
             
-            if touch.locationInNode(self).x < (2048 * 0.75) {
+            if touch.location(in: self).x < (2048 * 0.75) {
                 if !anyButtonTouched {
-                    self.firstTouch = touches.first!.locationInNode(self)
+                    self.firstTouch = touches.first!.location(in: self)
                     self.joyBase.position = self.firstTouch!
                     self.joyBase.zPosition = 20
                     self.joyStick.position = self.firstTouch!
@@ -111,8 +111,8 @@ class GameScene: SKScene {
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let nextTouch = touches.first!.locationInNode(self)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let nextTouch = touches.first!.location(in: self)
         if nextTouch.x < (2048 * 0.75){
             self.joyStick.position = nextTouch
             if let firstTouch = self.firstTouch {
@@ -125,13 +125,13 @@ class GameScene: SKScene {
   
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
      
         var anyButtonTouched = false
         for touch in touches {
  
             for button in self.buttonList {
-                if button.wasPressed(touch.locationInNode(self)) {anyButtonTouched = true}
+                if button.wasPressed(touch.location(in: self)) {anyButtonTouched = true}
             }
             if !anyButtonTouched {
                 self.joyBase.removeFromParent()
@@ -143,7 +143,7 @@ class GameScene: SKScene {
     }
 
 
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         
         /* Called before each frame is rendered */
         

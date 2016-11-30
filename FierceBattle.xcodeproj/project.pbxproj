@@ -18,13 +18,14 @@
 		268398961C61614A00AB955E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268398941C61614A00AB955E /* LaunchScreen.storyboard */; };
 		26A1D0D91CAB6DDC0068FA30 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 26A1D0D81CAB6DDC0068FA30 /* MainMenuScene.sks */; };
 		26A1D0DB1CAB6E000068FA30 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1D0DA1CAB6E000068FA30 /* MainMenuScene.swift */; };
-		26B0BD801C686FC2006AB939 /* GuileTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 26B0BD7F1C686FC2006AB939 /* GuileTheme.mp3 */; };
 		26B0BD821C693CDB006AB939 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B0BD811C693CDB006AB939 /* Fighter.swift */; };
+		26D532FC1DEE42D200335660 /* NWO.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 26D532FB1DEE42D200335660 /* NWO.mp3 */; };
+		26D532FE1DEE42F900335660 /* DangerZone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 26D532FD1DEE42F900335660 /* DangerZone.mp3 */; };
 		26E118C21CD52B5D0071A09C /* FighterProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E118C11CD52B5D0071A09C /* FighterProfile.swift */; };
+		26E118DD1CD992580071A09C /* stageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E118DC1CD992580071A09C /* stageLoader.swift */; };
 		26F67A3B1C6D4C72002A7BCA /* Hitbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A3A1C6D4C72002A7BCA /* Hitbox.swift */; };
 		26F67A3D1C6E9F10002A7BCA /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A3C1C6E9F10002A7BCA /* BoundingBox.swift */; };
 		26F67A3F1C6EFF32002A7BCA /* FighterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A3E1C6EFF32002A7BCA /* FighterState.swift */; };
-		26F67A411C751507002A7BCA /* NWO.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 26F67A401C751507002A7BCA /* NWO.mp3 */; };
 		26F67A431C7CF3C2002A7BCA /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A421C7CF3C2002A7BCA /* Stage.swift */; };
 		26F67A451C7CFCC0002A7BCA /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67A441C7CFCC0002A7BCA /* GameButton.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +33,7 @@
 /* Begin PBXFileReference section */
 		2622781C1C61DDA300A6E595 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
 		2622781E1C61DF1500A6E595 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
-		268398841C61614A00AB955E /* physFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = physFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		268398841C61614A00AB955E /* FierceBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FierceBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268398871C61614A00AB955E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268398891C61614A00AB955E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		2683988B1C61614A00AB955E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -43,13 +44,14 @@
 		268398971C61614A00AB955E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A1D0D81CAB6DDC0068FA30 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MainMenuScene.sks; path = ../MainMenuScene.sks; sourceTree = "<group>"; };
 		26A1D0DA1CAB6E000068FA30 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
-		26B0BD7F1C686FC2006AB939 /* GuileTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GuileTheme.mp3; sourceTree = "<group>"; };
 		26B0BD811C693CDB006AB939 /* Fighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
+		26D532FB1DEE42D200335660 /* NWO.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NWO.mp3; sourceTree = "<group>"; };
+		26D532FD1DEE42F900335660 /* DangerZone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DangerZone.mp3; sourceTree = "<group>"; };
 		26E118C11CD52B5D0071A09C /* FighterProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FighterProfile.swift; sourceTree = "<group>"; };
+		26E118DC1CD992580071A09C /* stageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stageLoader.swift; sourceTree = "<group>"; };
 		26F67A3A1C6D4C72002A7BCA /* Hitbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hitbox.swift; sourceTree = "<group>"; };
 		26F67A3C1C6E9F10002A7BCA /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
 		26F67A3E1C6EFF32002A7BCA /* FighterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FighterState.swift; sourceTree = "<group>"; };
-		26F67A401C751507002A7BCA /* NWO.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NWO.mp3; sourceTree = "<group>"; };
 		26F67A421C7CF3C2002A7BCA /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		26F67A441C7CFCC0002A7BCA /* GameButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +78,7 @@
 		268398851C61614A00AB955E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				268398841C61614A00AB955E /* physFun.app */,
+				268398841C61614A00AB955E /* FierceBattle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,22 +86,21 @@
 		268398861C61614A00AB955E /* physFun */ = {
 			isa = PBXGroup;
 			children = (
+				26E118C41CD575D30071A09C /* Controls */,
 				26E118C31CD52CC30071A09C /* Player */,
 				26A1D0D81CAB6DDC0068FA30 /* MainMenuScene.sks */,
 				268398871C61614A00AB955E /* AppDelegate.swift */,
 				26A1D0DA1CAB6E000068FA30 /* MainMenuScene.swift */,
-				26F67A421C7CF3C2002A7BCA /* Stage.swift */,
 				268398891C61614A00AB955E /* GameScene.sks */,
 				2683988B1C61614A00AB955E /* GameScene.swift */,
-				26F67A441C7CFCC0002A7BCA /* GameButton.swift */,
+				26E118DE1CD995040071A09C /* Stage */,
 				2683988D1C61614A00AB955E /* GameViewController.swift */,
 				2622781C1C61DDA300A6E595 /* TitleScene.swift */,
+				26E118C51CD575F20071A09C /* Audio Files */,
 				2622781E1C61DF1500A6E595 /* TitleScene.sks */,
 				2683988F1C61614A00AB955E /* Main.storyboard */,
 				268398921C61614A00AB955E /* Assets.xcassets */,
 				268398941C61614A00AB955E /* LaunchScreen.storyboard */,
-				26B0BD7F1C686FC2006AB939 /* GuileTheme.mp3 */,
-				26F67A401C751507002A7BCA /* NWO.mp3 */,
 				268398971C61614A00AB955E /* Info.plist */,
 			);
 			path = physFun;
@@ -117,12 +118,38 @@
 			name = Player;
 			sourceTree = "<group>";
 		};
+		26E118C41CD575D30071A09C /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				26F67A441C7CFCC0002A7BCA /* GameButton.swift */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		26E118C51CD575F20071A09C /* Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				26D532FB1DEE42D200335660 /* NWO.mp3 */,
+				26D532FD1DEE42F900335660 /* DangerZone.mp3 */,
+			);
+			name = "Audio Files";
+			sourceTree = "<group>";
+		};
+		26E118DE1CD995040071A09C /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				26E118DC1CD992580071A09C /* stageLoader.swift */,
+				26F67A421C7CF3C2002A7BCA /* Stage.swift */,
+			);
+			name = Stage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		268398831C61614A00AB955E /* physFun */ = {
+		268398831C61614A00AB955E /* FierceBattle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2683989A1C61614A00AB955E /* Build configuration list for PBXNativeTarget "physFun" */;
+			buildConfigurationList = 2683989A1C61614A00AB955E /* Build configuration list for PBXNativeTarget "FierceBattle" */;
 			buildPhases = (
 				268398801C61614A00AB955E /* Sources */,
 				268398811C61614A00AB955E /* Frameworks */,
@@ -132,9 +159,9 @@
 			);
 			dependencies = (
 			);
-			name = physFun;
+			name = FierceBattle;
 			productName = physFun;
-			productReference = 268398841C61614A00AB955E /* physFun.app */;
+			productReference = 268398841C61614A00AB955E /* FierceBattle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,10 +176,12 @@
 				TargetAttributes = {
 					268398831C61614A00AB955E = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 55FP67Q44V;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
-			buildConfigurationList = 2683987F1C61614A00AB955E /* Build configuration list for PBXProject "physFun" */;
+			buildConfigurationList = 2683987F1C61614A00AB955E /* Build configuration list for PBXProject "FierceBattle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -165,7 +194,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				268398831C61614A00AB955E /* physFun */,
+				268398831C61614A00AB955E /* FierceBattle */,
 			);
 		};
 /* End PBXProject section */
@@ -178,8 +207,8 @@
 				26A1D0D91CAB6DDC0068FA30 /* MainMenuScene.sks in Resources */,
 				2683988A1C61614A00AB955E /* GameScene.sks in Resources */,
 				268398961C61614A00AB955E /* LaunchScreen.storyboard in Resources */,
-				26F67A411C751507002A7BCA /* NWO.mp3 in Resources */,
-				26B0BD801C686FC2006AB939 /* GuileTheme.mp3 in Resources */,
+				26D532FE1DEE42F900335660 /* DangerZone.mp3 in Resources */,
+				26D532FC1DEE42D200335660 /* NWO.mp3 in Resources */,
 				268398931C61614A00AB955E /* Assets.xcassets in Resources */,
 				2622781F1C61DF1500A6E595 /* TitleScene.sks in Resources */,
 				268398911C61614A00AB955E /* Main.storyboard in Resources */,
@@ -194,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A1D0DB1CAB6E000068FA30 /* MainMenuScene.swift in Sources */,
+				26E118DD1CD992580071A09C /* stageLoader.swift in Sources */,
 				2683988C1C61614A00AB955E /* GameScene.swift in Sources */,
 				26B0BD821C693CDB006AB939 /* Fighter.swift in Sources */,
 				26F67A3D1C6E9F10002A7BCA /* BoundingBox.swift in Sources */,
@@ -315,10 +345,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 55FP67Q44V;
 				INFOPLIST_FILE = physFun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.griffy.physFun;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.griffy.FierceBattle;
+				PRODUCT_NAME = FierceBattle;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -326,17 +358,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 55FP67Q44V;
 				INFOPLIST_FILE = physFun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.griffy.physFun;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.griffy.FierceBattle;
+				PRODUCT_NAME = FierceBattle;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2683987F1C61614A00AB955E /* Build configuration list for PBXProject "physFun" */ = {
+		2683987F1C61614A00AB955E /* Build configuration list for PBXProject "FierceBattle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				268398981C61614A00AB955E /* Debug */,
@@ -345,7 +379,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2683989A1C61614A00AB955E /* Build configuration list for PBXNativeTarget "physFun" */ = {
+		2683989A1C61614A00AB955E /* Build configuration list for PBXNativeTarget "FierceBattle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2683989B1C61614A00AB955E /* Debug */,

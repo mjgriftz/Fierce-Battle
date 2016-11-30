@@ -9,6 +9,9 @@
 import Foundation
 import SpriteKit
 
+let BUTTON_WIDTH = 256.0
+let BUTTON_HEIGHT = 256.0
+
 class GameButton {
     
     var image: SKSpriteNode
@@ -18,11 +21,11 @@ class GameButton {
         self.image = SKSpriteNode(imageNamed: image)
         self.position = position
         self.image.position = position
-        self.image.size.width = 256.0
-        self.image.size.height = 256.0
+        self.image.size.width = BUTTON_WIDTH
+        self.image.size.height = BUTTON_HEIGHT
     }
     
-    func wasPressed(touchPoint: CGPoint) -> Bool {
+    func wasPressed(_ touchPoint: CGPoint) -> Bool {
         let xDiff = touchPoint.x - self.position.x
         let yDiff = touchPoint.y - self.position.y
         let totalDist = sqrt(xDiff * xDiff + yDiff * yDiff)
@@ -30,14 +33,16 @@ class GameButton {
         return false
     }
     
-    func execute(player: Fighter) -> Bool {
+    func execute(_ player: Fighter) -> Bool {
         
         return true
     }
 }
 
+/* Distinct GameButtons commands */
+
 class JumpButton : GameButton {
-    override func execute(player: Fighter) -> Bool {
+    override func execute(_ player: Fighter) -> Bool {
         player.state.tryJump(player)
         
         return true
@@ -45,7 +50,7 @@ class JumpButton : GameButton {
 }
 
 class AttackButton : GameButton {
-    override func execute(player: Fighter) -> Bool {
+    override func execute(_ player: Fighter) -> Bool {
         player.state.tryAttack(player)
         
         return true
@@ -53,7 +58,7 @@ class AttackButton : GameButton {
 }
 
 class SpecialButton : GameButton {
-    override func execute(player: Fighter) -> Bool {
+    override func execute(_ player: Fighter) -> Bool {
         player.state.trySpecial(player)
         
         return true
@@ -61,7 +66,7 @@ class SpecialButton : GameButton {
 }
 
 class BlockButton: GameButton {
-    override func execute(player: Fighter) -> Bool {
+    override func execute(_ player: Fighter) -> Bool {
         player.state.tryBlock(player)
         
         return true
