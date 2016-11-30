@@ -9,8 +9,8 @@
 import Foundation
 import SpriteKit
 
-let BUTTON_WIDTH = 256.0
-let BUTTON_HEIGHT = 256.0
+let BUTTON_WIDTH: CGFloat = 256.0
+let BUTTON_HEIGHT: CGFloat = 256.0
 
 class GameButton {
     

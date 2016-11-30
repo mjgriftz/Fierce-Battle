@@ -10,6 +10,7 @@ import SpriteKit
 import AVFoundation
 
 class GameScene: SKScene {
+    let HEALTH_SIZE: CGFloat = 500.0
     let P_LAYER: CGFloat = 6.0
     let HUD_LAYER: CGFloat = 10.0
     let startPosition1 = CGPoint(x: 300.0, y: 500.0);
@@ -25,6 +26,8 @@ class GameScene: SKScene {
         AttackButton(withImage: "attackButton", atPosition: CGPoint(x: 1920, y: 512))
     ]
     var stage = Stage(stageImage: "GuileBG")
+    var healthBar1 = SKSpriteNode(imageNamed: "healthBar")
+    var healthBar2 = SKSpriteNode(imageNamed: "healthBar")
     var audio: AVAudioPlayer?
     var firstTouch: CGPoint?
     var joyDidInit: Bool = false
@@ -58,8 +61,18 @@ class GameScene: SKScene {
             button.image.zPosition = self.HUD_LAYER
             self.addChild(button.image)
         }
-       
         
+        //Draw healthBar1
+        
+        healthBar1.position = CGPoint(x: self.size.width * (0.25), y: self.size.height * (0.75))
+        healthBar1.zPosition = HUD_LAYER
+        self.addChild(healthBar1)
+        
+        //Draw healthBar2
+        
+        healthBar2.position = CGPoint(x: self.size.width * (0.75), y: self.size.height * (0.75))
+        healthBar2.zPosition = HUD_LAYER
+        self.addChild(healthBar2)
         
         // Draw player one to the scene
         
@@ -149,5 +162,7 @@ class GameScene: SKScene {
         
         Player1.update(with: self.stage.grav, floor: self.stage.floor, right: self.stage.rightBound)
         Player2.update(with: self.stage.grav, floor: self.stage.floor, right: self.stage.rightBound)
+        healthBar1.size.width = HEALTH_SIZE * (CGFloat(Player1.hp) / 100.0)
+        healthBar2.size.width = HEALTH_SIZE * (CGFloat(Player2.hp) / 100.0)
     }
 }
